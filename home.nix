@@ -23,6 +23,8 @@ in
     ./programs/zsh.nix
     ./programs/git.nix
     ./programs/nixvim.nix
+    ./display/gtk.nix
+    ./display/dconf.nix
   ];
 
   nixpkgs = {
@@ -67,30 +69,6 @@ in
     sessionVariables = {
       EDITOR = "nvim";
       SHELL = "/home/yoh/.nix-profile/bin/zsh";
-    };
-  };
-
-  dconf.settings = {
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "Vitals@CoreCoding.com"
-        "dash-to-panel@jderose9.github.com"
-        "gtile"
-      ];
-    };
-  };
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Everforest-Dark-BL-LB";
-      package = pkgs.everforest-gtk-theme;
-    };
-    iconTheme = {
-      name = "Everforest-Dark";
-      package = pkgs.everforest-gtk-theme;
     };
   };
 
