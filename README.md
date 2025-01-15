@@ -57,6 +57,7 @@ for better experience, I use kitty terminal, zsh shell, and neovim editor via ni
 
 - [emmet](https://github.com/mattn/emmet-vim/)
 - [comment](https://github.com/numtostr/comment.nvim/)
+- [todo-comments](https://github.com/folke/todo-comments.nvim/)
 - [markdown-preview](https://github.com/iamcco/markdown-preview.nvim/)
 - [image](https://github.com/3rd/image.nvim)
 
