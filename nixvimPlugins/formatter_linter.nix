@@ -25,6 +25,9 @@
           prettier = {
             enable = true;
             disableTsServerFormatter = true;
+            settings = {
+              extra_filetypes = [ "vue" ];
+            };
           };
           black = {
             enable = true;
@@ -57,6 +60,10 @@
         dockerfile = [ "hadolint" ];
         terraform = [ "tflint" ];
       };
+    };
+
+    tailwind-tools = {
+      enable = true;
     };
   };
 }

@@ -8,7 +8,18 @@
         tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
         svelte.enable = false; # Svelte
-        vuels.enable = false; # Vue
+        volar = {
+          enable = true; # Vue
+          # volar formatter indent is broken, so we disable it in favor of prettier
+          onAttach.function = ''
+                 on_attach = function(client)
+            client.server_capabilities.document_formatting = false
+            client.server_capabilities.document_range_formatting = false
+                 end
+          '';
+          onAttach.override = true;
+        };
+        # prismals.enable = true; # Prisma ORM
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
         nil_ls.enable = true; # Nix
