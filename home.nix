@@ -43,7 +43,6 @@ in
 
     packages = with pkgs; [
       # Gnome
-      gnome-extension-manager
       gnomeExtensions.vitals
       gnomeExtensions.user-themes
       gnomeExtensions.dash-to-panel
