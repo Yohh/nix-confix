@@ -3,10 +3,17 @@
     lsp = {
       enable = true;
       servers = {
-        ts_ls.enable = true; # TS/JS
+        ts_ls = {
+          enable = true; # TS
+          filetypes = [ "typescript" "typescriptreact" "typescript.tsx" ];
+        };
         cssls.enable = true; # CSS
         tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
+        emmet_ls = {
+          enable = true;
+          filetypes = [ "html" "css" "scss" "javascript" "javascriptreact" "typescript" "typescriptreact" "svelte" "vue" ];
+        };
         svelte.enable = false; # Svelte
         volar = {
           enable = true; # Vue
@@ -19,6 +26,7 @@
           '';
           onAttach.override = true;
         };
+        angularls.enable = true; # Angular
         # prismals.enable = true; # Prisma ORM
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
@@ -63,6 +71,13 @@
 
     lualine = {
       enable = true;
+    };
+
+    trouble = {
+      enable = true;
+      settings = {
+        multiline = true;
+      };
     };
   };
 }

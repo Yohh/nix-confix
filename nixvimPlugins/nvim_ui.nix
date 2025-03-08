@@ -52,6 +52,12 @@
       filesystem = {
         filteredItems = {
           hideDotfiles = false;
+          alwaysShow = [
+            "node_modules"
+            "dist"
+            "'[A-Z]*'"
+          ];
+          visible = true;
         };
       };
     };

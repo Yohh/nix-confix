@@ -37,6 +37,14 @@
               }
             '';
           };
+          xmllint = {
+            enable = true;
+            settings = {
+              extra_filetypes = [
+                "svg"
+              ];
+            };
+          };
         };
         completion = {
           luasnip.enable = true;
