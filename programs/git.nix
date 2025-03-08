@@ -7,8 +7,5 @@
       rerere.enable = true;
       verbose.enable = true;
     };
-    includes = [
-      { path = "~/.gitconfig.local"; }
-    ];
   };
 }
