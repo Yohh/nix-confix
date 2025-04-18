@@ -26,7 +26,8 @@
             enable = true;
             disableTsServerFormatter = true;
             settings = {
-              extra_filetypes = [ "vue" ];
+              extra_filetypes = [ "vue" "json" ];
+              insert_final_newline = true;
             };
           };
           black = {

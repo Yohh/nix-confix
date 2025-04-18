@@ -27,7 +27,10 @@
           onAttach.override = true;
         };
         angularls.enable = true; # Angular
-        # prismals.enable = true; # Prisma ORM
+        mdx_analyzer = {
+          enable = true;
+          package = null;
+        };
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
         nil_ls.enable = true; # Nix

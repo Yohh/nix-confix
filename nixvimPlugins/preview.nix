@@ -10,12 +10,6 @@
 
     image = {
       enable = true;
-      integrations = {
-        markdown = {
-          enabled = true;
-          downloadRemoteImages = true;
-        };
-      };
     };
   };
 }

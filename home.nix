@@ -61,6 +61,7 @@ in
       direnv
       nix-direnv
       alejandra
+      dotnetCorePackages.sdk_9_0-bin
     ];
 
     sessionVariables.GTK_THEME = "Everforest-Dark-BL-LB";
