@@ -5,17 +5,13 @@
       extensions = {
         media-files = {
           enable = true;
-          dependencies = {
-	    chafa.enable = true;
-            imageMagick.enable = true;
-          };
           settings = {
             filetypes = [
               "png"
               "jpg"
               "jpeg"
               "webp"
-	      "gif"
+              "gif"
             ];
             find_cmd = "rg";
           };
