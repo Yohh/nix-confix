@@ -11,7 +11,7 @@
       nixclean = "nix-store --gc && nix-store --optimize";
       ddg = "web_search duckduckgo";
       ecosia = "web-search ecosia";
-      cat = "bat --paging=never";
+      cat = "bat --paging=never -p";
       icat = "kitty +kitten icat";
       code = "flatpak run com.visualstudio.code";
     };
@@ -39,6 +39,7 @@
         };
       }
     ];
-    initExtra = "source ~/.git-auto-log-ssh-agent";
+    initExtra = "source ~/.git-auto-log-ssh-agent
+                 export NIXPKGS_ALLOW_UNFREE=1";
   };
 }
