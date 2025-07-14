@@ -5,7 +5,8 @@
     userEmail = "durandyohan@zaclys.net";
     extraConfig = {
       rerere.enable = true;
-      verbose.enable = true;
+      commit.verbose = true;
+      init.defaultBranch = "master";
     };
   };
 }
