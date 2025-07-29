@@ -14,6 +14,7 @@
       cat = "bat --paging=never -p";
       icat = "kitty +kitten icat";
       code = "flatpak run com.visualstudio.code";
+      fixup = "git log -n 50 --oneline --no-merges | sk -d=' ' --preview='git show --color {1}' | cut -c -7 | xargs -o git commit --fixup";
     };
     oh-my-zsh = {
       enable = true;

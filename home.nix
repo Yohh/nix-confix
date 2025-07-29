@@ -55,6 +55,7 @@ in
       wget
       zsh
       zsh-syntax-highlighting
+      skim
 
       # Developpement
       git
