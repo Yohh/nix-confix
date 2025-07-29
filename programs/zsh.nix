@@ -40,6 +40,7 @@
       }
     ];
     initExtra = "source ~/.git-auto-log-ssh-agent
-                 export NIXPKGS_ALLOW_UNFREE=1";
+                 export NIXPKGS_ALLOW_UNFREE=1
+                 export PATH=$PATH:$HOME/go/bin";
   };
 }

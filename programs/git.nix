@@ -6,7 +6,7 @@
     extraConfig = {
       rerere.enable = true;
       commit.verbose = true;
-      init.defaultBranch = "master";
+      init.defaultBranch = "main";
     };
   };
 }
