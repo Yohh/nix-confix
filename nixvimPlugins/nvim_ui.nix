@@ -42,6 +42,7 @@
       enableGitStatus = true;
       enableModifiedMarkers = true;
       enableRefreshOnWrite = true;
+      enableDiagnostics = true;
       closeIfLastWindow = true;
       buffers = {
         bindToCwd = false;
@@ -58,6 +59,10 @@
             "'[A-Z]*'"
           ];
           visible = true;
+        };
+        followCurrentFile = {
+          enabled = true;
+          leaveDirsOpen = true;
         };
       };
     };
