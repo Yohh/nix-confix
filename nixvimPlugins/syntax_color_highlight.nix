@@ -7,7 +7,6 @@
         highlight.enable = true;
         indent.enable = true;
       };
-      folding = false;
     };
 
     colorizer = {

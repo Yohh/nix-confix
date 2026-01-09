@@ -1,12 +1,14 @@
 { pkgs, ... }:
 let
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/nix-community/nixvim";
-  });
+  nixvim = import (
+    builtins.fetchGit {
+      url = "https://github.com/nix-community/nixvim";
+    }
+  );
 in
 {
   imports = [
-    nixvim.homeManagerModules.nixvim
+    nixvim.homeModules.nixvim
     ./nixvimPlugins/cmp.nix
     ./nixvimPlugins/copilot.nix
     ./nixvimPlugins/formatter_linter.nix
@@ -42,12 +44,6 @@ in
     stateVersion = "24.05";
 
     packages = with pkgs; [
-      # Gnome
-      gnomeExtensions.vitals
-      gnomeExtensions.user-themes
-      gnomeExtensions.dash-to-panel
-      gnomeExtensions.gtile
-
       # Utils
       htop
       bat
@@ -63,6 +59,7 @@ in
       nix-direnv
       alejandra
       dotnetCorePackages.sdk_9_0-bin
+      nodejs_24
     ];
 
     sessionVariables.GTK_THEME = "Everforest-Dark-BL-LB";

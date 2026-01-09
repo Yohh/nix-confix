@@ -4,7 +4,11 @@
     opts = {
       number = true;
       shiftwidth = 2;
-      completeopt = [ "menu" "menuone" "noselect" ];
+      completeopt = [
+        "menu"
+        "menuone"
+        "noselect"
+      ];
       termguicolors = true;
     };
 
@@ -16,5 +20,9 @@
       chafa.enable = true;
       imagemagick.enable = true;
     };
+
+    extraConfigLua = ''
+      vim.g.copilot_node_command = "~/.nix-profile/bin/node"
+    '';
   };
 }

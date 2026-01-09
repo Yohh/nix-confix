@@ -20,13 +20,23 @@
         formatting = {
           alejandra.enable = true;
           stylua.enable = true;
-          shfmt.enable = true;
+          shfmt = {
+            enable = true;
+            settings = ''
+                   {
+              extra_args = { "-w", "-i", "4" }
+                   }
+            '';
+          };
           nixpkgs_fmt.enable = true;
           prettier = {
             enable = true;
             disableTsServerFormatter = true;
             settings = {
-              extra_filetypes = [ "vue" "json" ];
+              extra_filetypes = [
+                "vue"
+                "json"
+              ];
               insert_final_newline = true;
             };
           };
@@ -34,7 +44,7 @@
             enable = true;
             settings = ''
               {
-                extra_args = { "--fast" },
+                extra_args = { "--fast" }
               }
             '';
           };
@@ -69,10 +79,6 @@
         dockerfile = [ "hadolint" ];
         terraform = [ "tflint" ];
       };
-    };
-
-    tailwind-tools = {
-      enable = true;
     };
   };
 }

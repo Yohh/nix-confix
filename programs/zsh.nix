@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -12,9 +13,6 @@
       ddg = "web_search duckduckgo";
       ecosia = "web-search ecosia";
       cat = "bat --paging=never -p";
-      icat = "kitty +kitten icat";
-      code = "flatpak run com.visualstudio.code";
-      fixup = "git log -n 50 --oneline --no-merges | sk -d=' ' --preview='git show --color {1}' | cut -c -7 | xargs -o git commit --fixup";
     };
     oh-my-zsh = {
       enable = true;
@@ -40,7 +38,7 @@
         };
       }
     ];
-    initExtra = "source ~/.git-auto-log-ssh-agent
+    initContent = "source ~/.git-auto-log-ssh-agent
                  export NIXPKGS_ALLOW_UNFREE=1
                  export PATH=$PATH:$HOME/go/bin";
   };
