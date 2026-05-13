@@ -28,6 +28,10 @@
           next = "[x";
           prev = "]x";
         };
+        highlights = {
+          incoming = "DiffAdd";
+          current = "DiffAdd";
+        };
       };
     };
   };
