@@ -40,25 +40,25 @@
     neo-tree = {
       enable = true;
       settings = {
-        enableGitStatus = true;
-        enableModifiedMarkers = true;
-        enableRefreshOnWrite = true;
-        enableDiagnostics = true;
-        closeIfLastWindow = true;
+        enable_git_status = true;
+        enable_modified_markers = true;
+        enable_refresh_on_write = true;
+        enable_diagnostics = true;
+        close_if_last_window = true;
         buffers = {
-          bindToCwd = false;
-          followCurrentFile = {
+          bind_to_cwd = false;
+          follow_current_file = {
             enabled = true;
           };
         };
-        followCurrentFile = {
-          enabled = true;
-          leaveDirsOpen = true;
-        };
         filesystem = {
-          filteredItems = {
-            hideDotfiles = false;
-            alwaysShow = [
+          follow_current_file = {
+            enabled = true;
+            leave_dirs_open = true;
+          };
+          filtered_items = {
+            hide_dotfiles = false;
+            always_show = [
               "node_modules"
               "dist"
               "'[A-Z]*'"
