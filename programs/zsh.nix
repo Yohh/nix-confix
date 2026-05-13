@@ -23,8 +23,6 @@
         "copyfile"
         "web-search"
       ];
-      custom = "$HOME/.oh-my-custom";
-      theme = "agnoster-nix";
     };
     plugins = [
       {
@@ -39,7 +37,9 @@
       }
     ];
     initContent = "source ~/.git-auto-log-ssh-agent
-                 export NIXPKGS_ALLOW_UNFREE=1
-                 export PATH=$PATH:$HOME/go/bin";
+		  source ~/.oh-my-zsh/custom/plugins/kubectl-autocomplete/kubectl-autocomplete.plugin.zsh
+		  source ~/.oh-my-custom/agnoster-nix.zsh-theme
+		  export NIXPKGS_ALLOW_UNFREE=1
+		  export PATH=$PATH:$HOME/go/bin";
   };
 }
