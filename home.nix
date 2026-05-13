@@ -60,6 +60,9 @@ in
       alejandra
       dotnetCorePackages.sdk_9_0-bin
       nodejs_24
+
+      #theme
+      everforest-gtk-theme
     ];
 
     sessionVariables.GTK_THEME = "Everforest-Dark-BL-LB";
