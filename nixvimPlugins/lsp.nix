@@ -1,18 +1,25 @@
-{
+{ pkgs, ... }: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
       servers = {
         ts_ls = {
-          enable = true; # TS
+          enable = true;
           filetypes = [
             "typescript"
             "typescriptreact"
             "typescript.tsx"
           ];
         };
+        astro = {
+          enable = true;
+          extraOptions = {
+            init_options = {
+              typescript.tsdk = "${pkgs.typescript_5}/lib/node_modules/typescript/lib";
+            };
+          };
+        };
         cssls.enable = true; # CSS
-        tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
         emmet_ls = {
           enable = true;
@@ -26,30 +33,8 @@
             "typescriptreact"
             "svelte"
             "vue"
+            "astro"
           ];
-        };
-        svelte.enable = false; # Svelte
-        # volar = {
-        #   enable = true; # Vue
-        #   # volar formatter indent is broken, so we disable it in favor of prettier
-        #   onAttach.function = ''
-        #          on_attach = function(client)
-        #     client.server_capabilities.document_formatting = false
-        #     client.server_capabilities.document_range_formatting = false
-        #          end
-        #   '';
-        #   onAttach.override = true;
-        # };
-	vue_ls = {
-	  enable = true; # Vue
-	  filetypes = [
-	    "vue"
-	  ];
-	};
-        angularls.enable = true; # Angular
-        mdx_analyzer = {
-          enable = true;
-          package = null;
         };
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
