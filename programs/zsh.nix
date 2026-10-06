@@ -1,12 +1,11 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
-      nixdev = "nix develop --command zsh";
+      nixdev = "nix develop --extra-experimental-features nix-command --extra-experimental-features flakes --command zsh";
       nixdirenv = "echo \"use flake\" >> .envrc && direnv allow";
       nixconfig = "nvim ~/.config/home-manager/";
       nixclean = "nix-store --gc && nix-store --optimize";
@@ -37,7 +36,6 @@
       }
     ];
     initContent = "source ~/.git-auto-log-ssh-agent
-		  source ~/.oh-my-zsh/custom/plugins/kubectl-autocomplete/kubectl-autocomplete.plugin.zsh
 		  source ~/.oh-my-custom/agnoster-nix.zsh-theme
 		  export NIXPKGS_ALLOW_UNFREE=1
 		  export PATH=$PATH:$HOME/go/bin";
