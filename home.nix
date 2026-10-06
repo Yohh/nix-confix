@@ -39,7 +39,7 @@ in
 
     homeDirectory = "/home/yoh";
 
-    stateVersion = "24.05";
+    stateVersion = "26.05";
 
     packages = with pkgs; [
       # Utils
