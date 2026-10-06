@@ -36,6 +36,8 @@
             "astro"
           ];
         };
+	oxfmt.enable = true;
+	oxlint.enable = true;
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
         nil_ls.enable = true; # Nix

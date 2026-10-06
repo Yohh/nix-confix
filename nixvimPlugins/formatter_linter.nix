@@ -16,6 +16,7 @@
           deadnix.enable = true;
           pylint.enable = true;
           checkstyle.enable = true;
+	  stylelint.enable = true;
         };
         formatting = {
           alejandra.enable = true;
@@ -69,6 +70,7 @@
       lintersByFt = {
         text = [ "vale" ];
         eslint = [ "eslint" ];
+        oxLint = [ "oxlint" ];
         json = [ "jsonlint" ];
         markdown = [ "vale" ];
         rst = [ "vale" ];
