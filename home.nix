@@ -25,8 +25,6 @@ in
     ./programs/zsh.nix
     ./programs/git.nix
     ./programs/nixvim.nix
-    ./display/gtk.nix
-    ./display/dconf.nix
   ];
 
   nixpkgs = {
@@ -58,14 +56,7 @@ in
       direnv
       nix-direnv
       alejandra
-      dotnetCorePackages.sdk_9_0-bin
-      nodejs_24
-
-      #theme
-      everforest-gtk-theme
     ];
-
-    sessionVariables.GTK_THEME = "Everforest-Dark-BL-LB";
 
     sessionVariables = {
       EDITOR = "nvim";
