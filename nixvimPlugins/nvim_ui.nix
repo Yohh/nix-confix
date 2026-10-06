@@ -79,6 +79,9 @@
 
     notify = {
       enable = true;
+      settings = {
+        render = "wrapped-compact";
+      };
     };
 
     nui = {
